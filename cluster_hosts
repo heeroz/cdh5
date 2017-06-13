@@ -1,0 +1,5 @@
+# The following lines are desirable for IPv6 capable hosts
+172.31.16.10 ip-172-31-16-10
+172.31.16.20 ip-172-31-16-20
+172.31.16.30 ip-172-31-16-30
+

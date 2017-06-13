@@ -1,0 +1,4 @@
+- hosts: spark_worker
+  roles:
+    - { role: common, common_config_hostname: True }
+    - cdh5_spark_worker

@@ -1,0 +1,16 @@
+- hosts: spark_master
+  gather_facts: no
+  tasks:
+    - name: start_daemons
+      service: name={{ item }} state=started
+      with_items:
+        - spark-master
+
+- hosts: spark_worker
+  gather_facts: no
+  tasks:
+    - name: start_daemons
+      service: name={{ item }} state=started
+      with_items:
+        - spark_worker
+
