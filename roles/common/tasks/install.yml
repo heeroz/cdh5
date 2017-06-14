@@ -11,3 +11,14 @@
     - git
     - ant
     - language-pack-ja
+    - python-simplejson
+    - man-db
+    - sysstat
+    - lsof
+    - netcat
+    - parted
+    - iotop
+    - curl
+    - ifenslave
+    - xfsprogs
+

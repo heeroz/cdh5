@@ -77,3 +77,8 @@ ip-172-31-16-10
 ip-172-31-16-20
 ip-172-31-16-30
 
+[kafka-nodes]
+ip-172-31-16-10 ansible_ssh_host=172.31.16.10
+ip-172-31-16-20 ansible_ssh_host=172.31.16.20
+ip-172-31-16-30 ansible_ssh_host=172.31.16.30
+

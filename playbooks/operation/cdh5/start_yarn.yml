@@ -14,7 +14,7 @@
       with_items:
         - hadoop-yarn-nodemanager
 
-- hosts: hadoop_resourcemanager
+- hosts: hadoop_other
   gather_facts: no
   tasks:
     - name: start_daemons

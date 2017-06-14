@@ -7,6 +7,10 @@
 - name: make_var_zookeeper_dir
   file: path=/var/zookeeper state=directory owner='zookeeper' group='zookeeper'
 
+- name: initialize_zookeeper_data_dir
+  shell: /etc/init.d/zookeeper-server init
+  ignore_errors: yes
+
 - name: copy_myid
   template: src=myid.j2 dest=/var/zookeeper/myid
 
