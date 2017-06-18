@@ -1,4 +1,4 @@
-- hosts: hadoop_client
+- hosts: hbase_master 
   gather_facts: no
   sudo: True
   sudo_user: hdfs

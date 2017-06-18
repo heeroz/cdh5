@@ -2,6 +2,5 @@
   apt: name={{ item }} state=installed
   with_items:
   - spark-core
-  - spark-worker
   - spark-python
 

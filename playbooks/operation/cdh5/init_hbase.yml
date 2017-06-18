@@ -1,2 +1,2 @@
 - include: stop_hbase.yml
-- include: create_rootdir.yml
+- include: create_hbase_dir.yml

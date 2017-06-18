@@ -1,0 +1,23 @@
+- hosts: spark_master
+  gather_facts: no
+  sudo: True
+  sudo_user: hdfs
+  tasks:
+    - name: make_log_dir_for_spark
+      shell: hdfs dfs -mkdir -p /var/log/spark
+
+    - name: chown_log_dir_for_spark
+      shell: hdfs dfs -chown spark:hadoop /var/log/spark
+
+    - name: chown_log_dir
+      shell: hdfs dfs -chmod 777 /var/log/spark
+
+    - name: make_lib_dir_for_spark
+      shell: hdfs dfs -mkdir -p /user/spark/share/lib
+
+    - name: copy_jar_for_spark
+      shell: hdfs dfs -put /usr/lib/spark/lib/spark-assembly.jar /user/spark/share/lib/spark-assembly.jar
+
+    - name: chown_sparkuser_dir
+      shell: hdfs dfs -chown -R spark:hadoop /user/spark
+

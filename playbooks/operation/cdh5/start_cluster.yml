@@ -2,4 +2,4 @@
 - include: start_hdfs.yml
 - include: start_yarn.yml
 #- include: start_hbase.yml
-- include: start_spark.yml
+- include: start_kafka.yml

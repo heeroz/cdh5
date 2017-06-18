@@ -1,8 +1,12 @@
-- hosts: hadoop_namenode_primary 
+- hosts: hadoop_client
   gather_facts: no
   sudo: True
   sudo_user: hdfs
   tasks:
+    - name: remove_tmp_dir
+      shell: hdfs dfs -rm -r /tmp
+      ignore_errors: True
+
     - name: make_intermediate_dir
       shell: hdfs dfs -mkdir -p /tmp/hadoop-yarn/staging/history/done_intermediate
 
@@ -18,3 +22,11 @@
     - name: chown_log_dir
       shell: hdfs dfs -chown yarn:hadoop /var/log/hadoop-yarn
 
+    - name: make_log_dir_for_spark
+      shell: hdfs dfs -mkdir -p /var/log/spark
+
+    - name: chown_log_dir_for_spark
+      shell: hdfs dfs -chown spark:hadoop /var/log/spark
+
+    - name: chown_log_dir
+      shell: hdfs dfs -chmod 777 /var/log/spark
