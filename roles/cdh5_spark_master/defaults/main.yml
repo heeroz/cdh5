@@ -13,9 +13,7 @@ cdh5_spark_hdfs_cluster_name: 'mycluster'
 
 # spark-defaults.conf
 cdh5_spark_master: 'yarn'
-cdh5_spark_logdir: 'hdfs://{{ groups["hadoop_namenode_primary"][0] }}:8020/var/log/spark'
-cdh5_spark_historyserver: '{{ groups["hadoop_other"][0] }}'
-cdh5_spark_historyserver: '{{ groups["hadoop_other"][0] }}'
+cdh5_spark_logdir: 'hdfs://{{ groups["hadoop_namenode_primary"][0] }}:8020/user/spark/applicationHistory'
 
 # spark-env.sh
 cdh5_spark_exe_instances: '1'

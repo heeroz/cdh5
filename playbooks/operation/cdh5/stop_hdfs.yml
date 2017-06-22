@@ -21,6 +21,7 @@
       with_items:
         - hadoop-hdfs-namenode
         - hadoop-hdfs-zkfc
+        - hadoop-hdfs-secondarynamenode
 
 - hosts: hadoop_client
   tasks:

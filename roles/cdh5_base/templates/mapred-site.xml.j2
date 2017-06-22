@@ -19,18 +19,6 @@
 
 <configuration>
   <property>
-    <name>yarn.nodemanager.local-dirs</name>
-    <value>{{ cdh5_yarn_nm_local_dirs_list }}</value>
-  </property>
-  <property>
-    <name>yarn.nodemanager.log-dirs</name>
-    <value>{{ cdh5_yarn_nm_log_dirs_list }}</value>
-  </property>
-  <property>
-    <name>yarn.nodemanager.remote-app-log-dir</name>
-    <value>hdfs://{{ groups['hadoop_namenode_primary'][0] }}:8020{{ cdh5_yarn_nm_remote_app_log_dir }}</value>
-  </property>
-  <property>
     <name>mapreduce.jobhistory.address</name>
     <value>{{ groups['hadoop_namenode_primary'][0] }}:10020</value>
   </property>

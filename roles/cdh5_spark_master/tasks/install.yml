@@ -3,4 +3,4 @@
   with_items:
   - spark-core
   - spark-python
-#  - spark-history-server
+  - spark-history-server

@@ -4,3 +4,4 @@
   - hadoop-hdfs-namenode
   - hadoop-hdfs-zkfc
   - hadoop-mapreduce-historyserver
+  - hadoop-hdfs-secondarynamenode

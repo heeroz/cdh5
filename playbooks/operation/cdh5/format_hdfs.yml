@@ -10,7 +10,7 @@
   sudo_user: hdfs
   tasks:
     - name: format_hdfs
-      shell: yes | hdfs namenode -format
+      shell: yes | hadoop namenode -format
 
 - hosts: hadoop_namenode_primary
   gather_facts: no

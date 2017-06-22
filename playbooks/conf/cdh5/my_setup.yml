@@ -4,9 +4,9 @@
 - include: cdh5_resourcemanager.yml
 - include: cdh5_slave.yml
 - include: init_cluster.yml
-- include: cdh5_spark_master.yml
 - include: cdh5_spark_worker.yml
 - include: init_spark.yml
+- include: cdh5_spark_master.yml
 - include: cdh5_kafka.yml
 #- include: cdh5_hbase_master.yml
 #- include: cdh5_hbase_slave.yml
