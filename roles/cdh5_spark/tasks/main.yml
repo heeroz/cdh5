@@ -1,0 +1,2 @@
+- include: config.yml tags=config,cdh5_spark
+- include: user.yml tags=user,cdh5_spark

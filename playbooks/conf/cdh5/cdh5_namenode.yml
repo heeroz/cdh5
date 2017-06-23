@@ -1,6 +1,4 @@
 - hosts: hadoop_namenode
   roles:
-    - jdk
-    - { role: common, common_config_hostname: True }
     - cdh5_base
     - cdh5_namenode

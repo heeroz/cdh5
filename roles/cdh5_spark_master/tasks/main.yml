@@ -1,3 +1,1 @@
 - include: install.yml tags=install,cdh5_spark_master
-- include: config.yml tags=config,cdh5_spark_master
-- include: user.yml tags=user,cdh5_spark_master

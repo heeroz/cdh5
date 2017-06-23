@@ -1,3 +1,4 @@
 - hosts: spark_master
   roles:
-    - cdh5_spark_master
+    - cdh5_spark_history
+

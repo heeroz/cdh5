@@ -1,0 +1,16 @@
+- name: make_log_dir_for_spark
+  shell: sudo -u hdfs hdfs dfs -mkdir -p {{ cdh5_spark_logdir }}
+
+- name: make_lib_dir_for_spark
+  shell: sudo -u hdfs hdfs dfs -mkdir -p {{ cdh5_assemble_jar_path }}
+
+- name: copy_jar_for_spark
+  ignore_errors: yes
+  shell: sudo -u hdfs hdfs dfs -put /usr/lib/spark/lib/spark-assembly.jar {{ cdh5_assemble_jar }}
+
+- name: chmod_log_dir
+  shell: sudo -u hdfs hdfs dfs -chmod 1777 {{ cdh5_spark_logdir }}
+
+- name: chown_sparkuser_dir
+  shell: sudo -u hdfs hdfs dfs -chown -R spark:hadoop /user/spark
+
