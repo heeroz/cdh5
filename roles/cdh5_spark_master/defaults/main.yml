@@ -13,14 +13,15 @@ cdh5_spark_hdfs_cluster_name: 'mycluster'
 
 # spark-defaults.conf
 cdh5_spark_master: 'yarn'
-cdh5_spark_logdir: 'hdfs://{{ groups["hadoop_namenode_primary"][0] }}:8020/user/spark/applicationHistory'
+cdh5_spark_logdir: '/user/spark/applicationHistory'
+cdh5_assemble_jar: '/user/spark/share/lib/spark-assembly.jar'
 
 # spark-env.sh
 cdh5_spark_exe_instances: '1'
 cdh5_spark_exe_cores: '1'
 cdh5_spark_exe_mem: '400M'
 cdh5_spark_dri_mem: '400M'
-cdh5_spark_history_dir: 'hdfs://{{ cdh5_spark_hdfs_cluster_name }}/var/log/spark'
+#cdh5_spark_history_dir: 'hdfs://{{ cdh5_spark_hdfs_cluster_name }}/var/log/spark'
 
 # /etc/default/spark
 cdh5_spark_scala_home: '/usr/local/scala/default'

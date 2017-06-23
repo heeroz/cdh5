@@ -4,7 +4,7 @@
 # Example:
 #spark.master            spark://{{ groups['spark_master'][0] }}:7077
 spark.eventLog.enabled  true
-spark.eventLog.dir      {{ cdh5_spark_logdir }}
+spark.eventLog.dir     hdfs://{{ groups['spark_master'][0] }}:8020{{ cdh5_spark_logdir }} 
 #spark.serializer                 org.apache.spark.serializer.KryoSerializer
 #spark.driver.memory              1g
 #spark.executor.extraJavaOptions  -XX:+PrintGCDetails -Dkey=value -Dnumbers="one two three"
