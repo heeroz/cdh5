@@ -6,11 +6,9 @@
 
 - hosts: hadoop_namenode_primary
   gather_facts: no
-  sudo: True
-  sudo_user: hdfs
   tasks:
     - name: format_hdfs
-      shell: yes | hadoop namenode -format
+      shell: yes Y | sudo -u hdfs hadoop namenode -format
 
 - hosts: hadoop_namenode_primary
   gather_facts: no
