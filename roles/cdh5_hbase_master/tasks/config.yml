@@ -22,3 +22,9 @@
 - name: chown hbase datadir
   sudo: yes
   shell: chown hbase -R {{ cdh5_hbase_datadir }} 
+
+- name: start_daemons
+  service: name={{ item }} state=started
+  with_items:
+    - hbase-master
+
