@@ -6,3 +6,19 @@
   template: src={{ item }}.j2 dest=/etc/hbase/conf/{{ item }} mode=644
   with_items:
     - hbase-site.xml
+
+- name: mkdir hbase rootdir
+  sudo: yes
+  shell: mkdir -p {{ cdh5_hbase_rootdir }} 
+
+- name: chown hbase rootdir
+  sudo: yes
+  shell: chown hbase -R {{ cdh5_hbase_rootdir }} 
+
+- name: mkdir hbase datadir
+  sudo: yes
+  shell: mkdir -p {{ cdh5_hbase_datadir }} 
+
+- name: chown hbase datadir
+  sudo: yes
+  shell: chown hbase -R {{ cdh5_hbase_datadir }} 

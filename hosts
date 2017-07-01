@@ -29,28 +29,28 @@ hadoop_namenode_primary
 ; Primary NameNode
 ; This group should have only one node.
 [hadoop_namenode_primary]
-ip-172-31-16-40
+iot11
 
 ; All of Zookeeper nodes
 ; Each node has a parameter configuration about Zookeeper ID
 [hadoop_zookeeperserver]
-ip-172-31-16-40 zookeeper_server_id=1
-ip-172-31-16-50 zookeeper_server_id=2
-ip-172-31-16-60 zookeeper_server_id=3
+iot11 zookeeper_server_id=1
+iot22 zookeeper_server_id=2
+iot33 zookeeper_server_id=3
 
 ; All of ResourceManagers
 [hadoop_resourcemanager]
-ip-172-31-16-40
+iot11
 
 ; SlaveNodes
 [hadoop_slave]
-ip-172-31-16-40
-ip-172-31-16-50
-ip-172-31-16-60
+iot11
+iot22
+iot33
 
 ; Used as a client of Hadoop
 [hadoop_client]
-ip-172-31-16-40
+iot11
 
 ; Top group of HBase cluster
 ; Sorry, HBase configuration is not implemented yet.
@@ -59,26 +59,28 @@ hbase_master
 hbase_regionserver
 
 [hbase_master]
-ip-172-31-16-40
+iot11
 
 [hbase_regionserver]
-ip-172-31-16-40
-ip-172-31-16-50
-ip-172-31-16-60
+iot11
+iot22
+iot33
 
 [hadoop_other]
-ip-172-31-16-40
+iot11
 
 [spark_master]
-ip-172-31-16-40
+iot11
 
 [spark_worker]
-ip-172-31-16-40
-ip-172-31-16-50
-ip-172-31-16-60
+iot11
+iot22
+iot33
 
 [kafka-nodes]
-ip-172-31-16-40 ansible_ssh_host=172.31.16.40
-ip-172-31-16-50 ansible_ssh_host=172.31.16.50
-ip-172-31-16-60 ansible_ssh_host=172.31.16.60
+iot11 ansible_ssh_host=192.168.1.100
+iot22 ansible_ssh_host=192.168.1.110
+iot33 ansible_ssh_host=192.168.1.120
 
+[hive_server2]
+iot33

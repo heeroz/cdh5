@@ -1,5 +1,7 @@
-- name: install_spark_history
+- name: install_spark_worker
   apt: name={{ item }} state=installed
   with_items:
-  - spark-history-server
+  - spark-core
+#  - spark-worker
+  - spark-python
 

@@ -1,3 +1,0 @@
-#- include: proxy.yml
-- include: cdh5_spark_master.yml
-- include: cdh5_spark_worker.yml

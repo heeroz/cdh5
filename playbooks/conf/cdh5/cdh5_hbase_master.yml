@@ -1,5 +1,0 @@
-- hosts: hbase_master
-  roles:
-    - cdh5_base
-    - zookeeper_server
-    - cdh5_hbase_master

@@ -3,6 +3,12 @@
 # ========================
 cdh5_data_dir_list:
   - '/data/1'
+user_list:
+  - 'spark'
+  - 'yarn'
+  - 'hive'
+  - 'hbase'
+  - 'hdfs'
 
 # =========================================
 # parameters for each configuration file
@@ -21,7 +27,7 @@ cdh5_fencing_methods: 'shell(/bin/true)'
 # cdh5_fencing_private_key: '/home/centos/mykey.pem'
 
 # mapred-site.xml.j2
-cdh5_mr_mapreduce_task_tmp_dir: '/tmp/mapred/1'
+cdh5_mr_mapreduce_task_tmp_dir: '/tmp/mapred/'
 
 # yarn-site.xml.j2
 cdh5_yarn_nm_local_dirs_list:
@@ -29,6 +35,11 @@ cdh5_yarn_nm_local_dirs_list:
 cdh5_yarn_nm_log_dirs_list:
   - '/data/1/yarn/logs'
 cdh5_yarn_nm_remote_app_log_dir: '/var/log/hadoop-yarn/apps'
+cdh5_yarn_nm_log_dir: '/var/log/hadoop-yarn'
+cdh5_yarn_nm_tmp_dir: '/tmp'
+cdh5_yarn_nm_intermediate_dir: '/tmp/hadoop-yarn/staging/history/done_intermediate'
+cdh5_yarn_nm_staging_dir: '/tmp/hadoop-yarn/staging'
+
 cdh5_yarn_nodemanager_resource_cpu_vcores: '2'
 cdh5_yarn_scheduler_minimum_allocation_vcores: '1'
 cdh5_yarn_scheduler_maximum_allocation_vcores: '2'
@@ -48,3 +59,16 @@ cdh5_ganglia_servers: '239.2.11.71:8649'
 cdh5_mr_mapreduce_map_memory_mb: '2048'
 cdh5_mr_mapreduce_reduce_memory_mb: '2048'
 cdh5_hbase_regionserver_opts: '$HBASE_REGIONSERVER_OPTS -Xms2g -Xmx2g'
+cdh5_hbase_rootdir: '/tmp/hbase'
+cdh5_hbase_datadir: '/var/hbase'
+cdh5_hiveuser: 'hiveser'
+cdh5_hiveuser_pwd: 'futuredata'
+cdh5_metastore: 'metastore'
+cdh5_hive_schema_version: '1.1.0'
+
+#postgere conf
+postgres_conf: '/etc/postgresql/9.3/main/postgresql.conf'
+postgres_pg_hba_conf: '/etc/postgresql/9.3/main/pg_hba.conf'
+
+
+

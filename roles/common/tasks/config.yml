@@ -1,5 +1,13 @@
 - name: copy_hosts
-  copy: src=../../../{{ common_hosts_tmpl }} dest=/etc/hosts
+  copy: src=/etc/hosts dest=/tmp/hosts
+  when: common_hosts_replace
+
+- name: replace_hosts
+  shell: cat /tmp/hosts > /etc/hosts
+  when: common_hosts_replace
+
+- name: remove_tmp_hosts
+  file: path=/tmp/hosts state=absent
   when: common_hosts_replace
 
 - name: set_hostname_to_inventory_hostname

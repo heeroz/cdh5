@@ -1,7 +1,3 @@
-- name: make_data_dir
-  file: path={{ item }} state=directory owner=hdfs group=hadoop mode=777 recurse=no
-  with_items: '{{ cdh5_data_dir_list }}'
-
 - name: copy_xml_files
   template: src={{ item }}.j2 dest=/etc/hadoop/conf/{{ item }}
   with_items:
