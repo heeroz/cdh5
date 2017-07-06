@@ -22,6 +22,11 @@
 - name: make_app_log_dirs
   file: path={{ cdh5_yarn_nm_remote_app_log_dir }} state=directory owner=yarn group=hadoop mode=775
 
+- name: chown_data_dir
+  file: path={{ item }} state=directory owner=hdfs group=hadoop mode=777 recurse=no
+  with_items: '{{ cdh5_data_dir_list }}'
+
+
 - name: stop_daemons
   service: name={{ item }} state=stopped
   with_items:
